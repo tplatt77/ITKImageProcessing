@@ -1,11 +1,11 @@
+
 set(${PLUGIN_NAME}_ParameterWidgets_HDRS "")
 set(${PLUGIN_NAME}_ParameterWidgets_SRCS "")
 set(${PLUGIN_NAME}_ParameterWidgets_UIS "")
 
-# --------------------------------------------------------------------
-# List the name of your custom FilterParameter Widgets in this section
+
 set(${PLUGIN_NAME}_PARAMETER_WIDGETS
-  # SomeCustomWidget
+      ImportVectorImageStackWidget
 )
 
 # --------------------------------------------------------------------
@@ -22,13 +22,14 @@ file(APPEND ${RegisterKnownFilterParameterWidgetsFile} "#include \"SVWidgetsLib/
 file(APPEND ${RegisterKnownFilterParameterWidgetsFile} "#include \"SVWidgetsLib/Core/PipelineFilterWidgetFactory.hpp\"\n")
 file(APPEND ${RegisterKnownFilterParameterWidgetsFile} "#include \"${PLUGIN_NAME}/FilterParameterWidgets/FilterParameterWidgets.h\"\n\n")
 file(APPEND ${RegisterKnownFilterParameterWidgetsFile} "\nvoid ${PLUGIN_NAME}Plugin::registerFilterWidgets(FilterWidgetManager* idManager)\n{\n")
+# file(APPEND ${RegisterKnownFilterParameterWidgetsFile} "  FilterWidgetManager::Pointer idManager = FilterWidgetManager::Instance();\n")
 
 
 # --------------------------------------------------------------------
 # Loop through all the FilterParameterWidgets that this plugin is going to compile and make available.
 foreach(FPW ${${PLUGIN_NAME}_PARAMETER_WIDGETS})
-  set(${PLUGIN_NAME}_ParameterWidgets_HDRS
-    ${${PLUGIN_NAME}_ParameterWidgets_HDRS}
+  set(${PLUGIN_NAME}_ParameterWidgets_MOC_HDRS
+    ${${PLUGIN_NAME}_ParameterWidgets_MOC_HDRS}
     ${${PLUGIN_NAME}_SOURCE_DIR}/FilterParameterWidgets/${FPW}.h
     )
   set(${PLUGIN_NAME}_ParameterWidgets_SRCS
@@ -68,11 +69,11 @@ cmp_IDE_GENERATED_PROPERTIES("FilterParameterWidgets/UI_Files" "${${PLUGIN_NAME}
 
 # --------------------------------------------------------------------
 # and finally this will run moc:
-#QT4_WRAP_CPP( ${PLUGIN_NAME}_ParameterWidgets_Generated_MOC_SRCS ${${PLUGIN_NAME}_ParameterWidgets_HDRS} )
+QT5_WRAP_CPP( ${PLUGIN_NAME}_ParameterWidgets_Generated_MOC_SRCS ${${PLUGIN_NAME}_ParameterWidgets_MOC_HDRS} )
 
 # These generated moc files will be #include in the FilterWidget source file that
 # are generated so we need to tell the build system to NOT compile these files
-set_source_files_properties( ${${PLUGIN_NAME}_ParameterWidgets_Generated_MOC_SRCS} PROPERTIES HEADER_FILE_ONLY TRUE)
+#set_source_files_properties( ${${PLUGIN_NAME}_ParameterWidgets_Generated_MOC_SRCS} PROPERTIES HEADER_FILE_ONLY TRUE)
 
 # -- Run MOC and UIC on the necessary files
 # QT5_ADD_RESOURCES( ${PLUGIN_NAME}_Generated_RC_SRCS "${DREAM3DProj_SOURCE_DIR}/Documentation/Filters/Generated_FilterDocs.qrc"  )
@@ -86,7 +87,6 @@ QT5_WRAP_UI( ${PLUGIN_NAME}_ParameterWidgets_Generated_UI_HDRS ${${PLUGIN_NAME}_
 cmp_IDE_SOURCE_PROPERTIES( "Generated/Qt_Moc" "" "${${PLUGIN_NAME}_ParameterWidgets_Generated_MOC_SRCS}" "0")
 cmp_IDE_SOURCE_PROPERTIES( "Generated/Qt_Uic" "${${PLUGIN_NAME}_ParameterWidgets_Generated_UI_HDRS}" "" "0")
 #cmp_IDE_SOURCE_PROPERTIES( "Generated/Qt_Qrc" "${${PLUGIN_NAME}_Generated_RC_SRCS}" "" "0")
-
 
 
 

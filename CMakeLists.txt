@@ -90,6 +90,8 @@ set(Project_SRCS "")
 include(${${PLUGIN_NAME}_SOURCE_DIR}/${PLUGIN_NAME}Filters/SourceList.cmake)
 # Add in our Plugin Specific FilterParameterWidgets
 include(${${PLUGIN_NAME}_SOURCE_DIR}/FilterParameterWidgets/SourceList.cmake)
+# Add in our Plugin Specific FilterParameter
+include(${${PLUGIN_NAME}_SOURCE_DIR}/FilterParameters/SourceList.cmake)
 #-----------------------------------------------------
 # Include any extra Widgets that this plugin needs
 include(${${PLUGIN_NAME}_SOURCE_DIR}/Widgets/SourceList.cmake)
@@ -209,6 +211,9 @@ set(${PLUGIN_NAME}_MODULE_SRCS
   ${${PLUGIN_NAME}_MOC_HDRS}
   ${${PLUGIN_NAME}_MISC_HDRS}
   ${${PLUGIN_NAME}_Generated_MOC_SRCS}
+  #-- Add in custom filter Parameters
+  ${${PLUGIN_NAME}_FilterParameters_HDRS}
+  ${${PLUGIN_NAME}_FilterParameters_SRCS}
   # -- Add in the Filter Parameter Widgets
   ${${PLUGIN_NAME}_ParameterWidgets_HDRS}
   ${${PLUGIN_NAME}_ParameterWidgets_SRCS}
@@ -235,8 +240,6 @@ if(NOT MSVC)
   set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_SAVE ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
   set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/Plugins  )
 endif()
-
-
 
 add_library(${PLUGIN_NAME} MODULE ${${PLUGIN_NAME}_MODULE_SRCS})
 target_link_libraries(${PLUGIN_NAME}

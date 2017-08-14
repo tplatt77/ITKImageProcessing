@@ -16,6 +16,7 @@ set(_PublicFilters
   ITKImageReader
   ITKImageWriter
   ITKImportImageStack
+  ITKImportVectorImageStack
   ITKAbsImage
   ITKBoxMeanImage
   ITKAcosImage
@@ -167,6 +168,7 @@ ADD_SIMPL_SUPPORT_HEADER(${${PLUGIN_NAME}_SOURCE_DIR} ${_filterGroupName} itkImp
 ADD_SIMPL_SUPPORT_HEADER(${${PLUGIN_NAME}_SOURCE_DIR} ${_filterGroupName} itkImportDream3DImageContainer.hxx)
 ADD_SIMPL_SUPPORT_HEADER(${${PLUGIN_NAME}_SOURCE_DIR} ${_filterGroupName} itkDream3DFilterInterruption.h)
 ADD_SIMPL_SUPPORT_HEADER(${${PLUGIN_NAME}_SOURCE_DIR} ${_filterGroupName} Dream3DTemplateAliasMacro.h)
+ADD_SIMPL_SUPPORT_HEADER(${${PLUGIN_NAME}_SOURCE_DIR} ${_filterGroupName} ITKImageProcessingHelpers.hpp)
 
 #---------------------
 # This macro must come last after we are done adding all the filters and support files.

@@ -33,8 +33,8 @@
 *
 * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-#ifndef _ITKImportImageStack_H_
-#define _ITKImportImageStack_H_
+#ifndef _iTKImportImageStack_H_
+#define _iTKImportImageStack_H_
 
 #include <QtCore/QFile>
 
@@ -44,9 +44,8 @@
 #include "SIMPLib/FilterParameters/FloatVec3FilterParameter.h"
 #include "SIMPLib/SIMPLib.h"
 
-#include "ITKImageProcessing/ITKImageProcessingFilters/itkDream3DImage.h"
 
-#include <itkImageSeriesReader.h>
+
 
 /**
  * @brief The ITKImportImageStack class. See [Filter documentation](@ref itkimportimagestack) for details.
@@ -180,10 +179,6 @@ protected:
   void initialize();
 
 private:
-  /**
-   * @brief Get the ordered list of input files.
-   */
-  QVector<QString> getFileList();
 
   /**
    * @brief readImage does the work of reading in the image. If \c dataCheck
@@ -191,12 +186,6 @@ private:
    * is not read.
    */
   void readImage(const QVector<QString>& fileList, bool dataCheck);
-  template <typename TPixel> void readImageWithPixelType(const QVector<QString>& fileList, bool dataCheck);
-
-  /**
-  * @brief Reads image size, spacing and origin, and updates container information accordingly.
-  */
-  template <typename TPixel> void readImageOutputInformation(typename itk::ImageSeriesReader<itk::Dream3DImage<TPixel, 3>>::Pointer& reader, DataContainer::Pointer& container);
 
   DEFINE_DATAARRAY_VARIABLE(uint8_t, ImageData)
 
