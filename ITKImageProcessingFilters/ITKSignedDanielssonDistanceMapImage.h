@@ -4,8 +4,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKSignedDanielssonDistanceMapImage_h_
-#define _ITKSignedDanielssonDistanceMapImage_h_
+#ifndef _d3d_itk_SignedDanielssonDistanceMapImage_h_
+#define _d3d_itk_SignedDanielssonDistanceMapImage_h_
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -101,4 +101,4 @@ private:
 #pragma clang diagnostic pop
 #endif
 
-#endif /* _ITKSignedDanielssonDistanceMapImage_H_ */
+#endif /* _d3d_itk_SignedDanielssonDistanceMapImage_H_ */

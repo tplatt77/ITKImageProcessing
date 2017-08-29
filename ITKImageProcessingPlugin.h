@@ -31,8 +31,8 @@
 *
 * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-#ifndef _ITKImageProcessing_H_
-#define _ITKImageProcessing_H_
+#ifndef _d3d_itk_ImageProcessing_H_
+#define _d3d_itk_ImageProcessing_H_
 
 #include <QtCore/QObject>
 #include <QtCore/QSettings>
@@ -190,4 +190,4 @@ private:
   void operator=(const ITKImageProcessingPlugin&);           // Operator '=' Not Implemented
 };
 
-#endif /* _ITKImageProcessing_H_ */
+#endif /* _d3d_itk_ImageProcessing_H_ */

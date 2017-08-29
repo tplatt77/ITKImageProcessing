@@ -4,8 +4,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKShotNoiseImage_h_
-#define _ITKShotNoiseImage_h_
+#ifndef _d3d_itk_ShotNoiseImage_h_
+#define _d3d_itk_ShotNoiseImage_h_
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -98,4 +98,4 @@ private:
 #pragma clang diagnostic pop
 #endif
 
-#endif /* _ITKShotNoiseImage_H_ */
+#endif /* _d3d_itk_ShotNoiseImage_H_ */

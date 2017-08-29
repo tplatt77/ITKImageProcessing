@@ -4,8 +4,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKGrayscaleErodeImage_h_
-#define _ITKGrayscaleErodeImage_h_
+#ifndef _d3d_itk_GrayscaleErodeImage_h_
+#define _d3d_itk_GrayscaleErodeImage_h_
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -99,4 +99,4 @@ private:
 #pragma clang diagnostic pop
 #endif
 
-#endif /* _ITKGrayscaleErodeImage_H_ */
+#endif /* _d3d_itk_GrayscaleErodeImage_H_ */

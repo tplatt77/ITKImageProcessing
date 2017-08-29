@@ -4,8 +4,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKClosingByReconstructionImage_h_
-#define _ITKClosingByReconstructionImage_h_
+#ifndef _d3d_itk_ClosingByReconstructionImage_h_
+#define _d3d_itk_ClosingByReconstructionImage_h_
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -106,4 +106,4 @@ private:
 #pragma clang diagnostic pop
 #endif
 
-#endif /* _ITKClosingByReconstructionImage_H_ */
+#endif /* _d3d_itk_ClosingByReconstructionImage_H_ */

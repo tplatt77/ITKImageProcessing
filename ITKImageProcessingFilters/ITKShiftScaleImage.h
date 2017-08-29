@@ -4,8 +4,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKShiftScaleImage_h_
-#define _ITKShiftScaleImage_h_
+#ifndef _d3d_itk_ShiftScaleImage_h_
+#define _d3d_itk_ShiftScaleImage_h_
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -98,4 +98,4 @@ private:
 #pragma clang diagnostic pop
 #endif
 
-#endif /* _ITKShiftScaleImage_H_ */
+#endif /* _d3d_itk_ShiftScaleImage_H_ */

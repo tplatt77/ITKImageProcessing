@@ -2,8 +2,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKImageBase_h_
-#define _ITKImageBase_h_
+#ifndef _d3d_itk_ImageBase_h_
+#define _d3d_itk_ImageBase_h_
 
 #include "SIMPLib/Common/AbstractFilter.h"
 #include "SIMPLib/Common/SIMPLibSetGetMacros.h"
@@ -424,4 +424,4 @@ private:
   void operator=(const ITKImageBase&); // Operator '=' Not Implemented
 };
 
-#endif /* _ITKImageBase_H_ */
+#endif /* _d3d_itk_ImageBase_H_ */

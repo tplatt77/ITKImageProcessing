@@ -350,7 +350,7 @@ const QString ITKImportImageStack::getFilterVersion()
 // -----------------------------------------------------------------------------
 const QString ITKImportImageStack::getGroupName()
 {
-  return "IO";
+  return SIMPL::FilterGroups::IOFilters;
 }
 
 // -----------------------------------------------------------------------------
@@ -358,7 +358,7 @@ const QString ITKImportImageStack::getGroupName()
 // -----------------------------------------------------------------------------
 const QString ITKImportImageStack::getSubGroupName()
 {
-  return "Input";
+  return SIMPL::FilterSubGroups::InputFilters;
 }
 
 // -----------------------------------------------------------------------------

@@ -4,8 +4,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKBinomialBlurImage_h_
-#define _ITKBinomialBlurImage_h_
+#ifndef _d3d_itk_BinomialBlurImage_h_
+#define _d3d_itk_BinomialBlurImage_h_
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -95,4 +95,4 @@ private:
 #pragma clang diagnostic pop
 #endif
 
-#endif /* _ITKBinomialBlurImage_H_ */
+#endif /* _d3d_itk_BinomialBlurImage_H_ */

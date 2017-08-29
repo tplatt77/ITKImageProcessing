@@ -4,8 +4,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKStandardDeviationProjectionImage_h_
-#define _ITKStandardDeviationProjectionImage_h_
+#ifndef _d3d_itk_StandardDeviationProjectionImage_h_
+#define _d3d_itk_StandardDeviationProjectionImage_h_
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -95,4 +95,4 @@ private:
 #pragma clang diagnostic pop
 #endif
 
-#endif /* _ITKStandardDeviationProjectionImage_H_ */
+#endif /* _d3d_itk_StandardDeviationProjectionImage_H_ */

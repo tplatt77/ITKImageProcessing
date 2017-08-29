@@ -2,8 +2,8 @@
 // Insert your license & copyright information here
 // -----------------------------------------------------------------------------
 
-#ifndef _ITKTestBase_h_
-#define _ITKTestBase_h_
+#ifndef _d3d_itk_TestBase_h_
+#define _d3d_itk_TestBase_h_
 
 #include <QtCore/QCoreApplication>
 #include <QtCore/QFile>

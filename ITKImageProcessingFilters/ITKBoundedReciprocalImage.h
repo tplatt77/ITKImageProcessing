@@ -4,8 +4,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKBoundedReciprocalImage_h_
-#define _ITKBoundedReciprocalImage_h_
+#ifndef _d3d_itk_BoundedReciprocalImage_h_
+#define _d3d_itk_BoundedReciprocalImage_h_
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -91,4 +91,4 @@ private:
 #pragma clang diagnostic pop
 #endif
 
-#endif /* _ITKBoundedReciprocalImage_H_ */
+#endif /* _d3d_itk_BoundedReciprocalImage_H_ */

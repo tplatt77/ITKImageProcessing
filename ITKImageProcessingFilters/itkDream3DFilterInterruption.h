@@ -1,5 +1,5 @@
-#ifndef _ITKDream3DFilterInterruption_h
-#define _ITKDream3DFilterInterruption_h
+#ifndef _d3d_itk_Dream3DFilterInterruption_h
+#define _d3d_itk_Dream3DFilterInterruption_h
 
 #include "itkCommand.h"
 #include "itkProcessObject.h"

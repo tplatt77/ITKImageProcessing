@@ -4,8 +4,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKAtanImage_h_
-#define _ITKAtanImage_h_
+#ifndef _d3d_itk_AtanImage_h_
+#define _d3d_itk_AtanImage_h_
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -91,4 +91,4 @@ private:
 #pragma clang diagnostic pop
 #endif
 
-#endif /* _ITKAtanImage_H_ */
+#endif /* _d3d_itk_AtanImage_H_ */

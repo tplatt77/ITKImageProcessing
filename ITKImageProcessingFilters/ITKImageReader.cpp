@@ -152,7 +152,8 @@ void ITKImageReader::preflight()
 // -----------------------------------------------------------------------------
 //
 // -----------------------------------------------------------------------------
-template <typename TComponent> void ITKImageReader::readImage(const itk::ImageIOBase::Pointer& imageIO, const QString& filename, bool dataCheck)
+template <typename TComponent> 
+void ITKImageReader::readImage(const itk::ImageIOBase::Pointer& imageIO, const QString& filename, bool dataCheck)
 {
   const unsigned int dimensions = imageIO->GetNumberOfDimensions();
   switch(dimensions)
@@ -175,7 +176,8 @@ template <typename TComponent> void ITKImageReader::readImage(const itk::ImageIO
   }
 }
 
-template <typename TComponent, unsigned int dimensions> void ITKImageReader::readImage(const itk::ImageIOBase::Pointer& imageIO, const QString& filename, bool dataCheck)
+template <typename TComponent, unsigned int dimensions> 
+void ITKImageReader::readImage(const itk::ImageIOBase::Pointer& imageIO, const QString& filename, bool dataCheck)
 {
   typedef itk::ImageIOBase::IOPixelType PixelTypeType;
   PixelTypeType pixel = imageIO->GetPixelType();

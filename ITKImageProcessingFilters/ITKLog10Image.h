@@ -4,8 +4,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKLog10Image_h_
-#define _ITKLog10Image_h_
+#ifndef _d3d_itk_Log10Image_h_
+#define _d3d_itk_Log10Image_h_
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -91,4 +91,4 @@ private:
 #pragma clang diagnostic pop
 #endif
 
-#endif /* _ITKLog10Image_H_ */
+#endif /* _d3d_itk_Log10Image_H_ */

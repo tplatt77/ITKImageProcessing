@@ -4,8 +4,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKBinaryClosingByReconstructionImage_h_
-#define _ITKBinaryClosingByReconstructionImage_h_
+#ifndef _d3d_itk_BinaryClosingByReconstructionImage_h_
+#define _d3d_itk_BinaryClosingByReconstructionImage_h_
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -107,4 +107,4 @@ private:
 #pragma clang diagnostic pop
 #endif
 
-#endif /* _ITKBinaryClosingByReconstructionImage_H_ */
+#endif /* _d3d_itk_BinaryClosingByReconstructionImage_H_ */

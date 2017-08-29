@@ -4,8 +4,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKGrayscaleMorphologicalOpeningImage_h_
-#define _ITKGrayscaleMorphologicalOpeningImage_h_
+#ifndef _d3d_itk_GrayscaleMorphologicalOpeningImage_h_
+#define _d3d_itk_GrayscaleMorphologicalOpeningImage_h_
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -103,4 +103,4 @@ private:
 #pragma clang diagnostic pop
 #endif
 
-#endif /* _ITKGrayscaleMorphologicalOpeningImage_H_ */
+#endif /* _d3d_itk_GrayscaleMorphologicalOpeningImage_H_ */

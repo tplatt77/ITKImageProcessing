@@ -4,8 +4,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKSigmoidImage_h_
-#define _ITKSigmoidImage_h_
+#ifndef _d3d_itk_SigmoidImage_h_
+#define _d3d_itk_SigmoidImage_h_
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -104,4 +104,4 @@ private:
 #pragma clang diagnostic pop
 #endif
 
-#endif /* _ITKSigmoidImage_H_ */
+#endif /* _d3d_itk_SigmoidImage_H_ */

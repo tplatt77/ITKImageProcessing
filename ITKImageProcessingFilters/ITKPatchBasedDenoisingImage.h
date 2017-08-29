@@ -2,8 +2,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKPatchBasedDenoisingImage_h_
-#define _ITKPatchBasedDenoisingImage_h_
+#ifndef _d3d_itk_PatchBasedDenoisingImage_h_
+#define _d3d_itk_PatchBasedDenoisingImage_h_
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -134,4 +134,4 @@ private:
 #pragma clang diagnostic pop
 #endif
 
-#endif /* _ITKPatchBasedDenoisingImage_H_ */
+#endif /* _d3d_itk_PatchBasedDenoisingImage_H_ */

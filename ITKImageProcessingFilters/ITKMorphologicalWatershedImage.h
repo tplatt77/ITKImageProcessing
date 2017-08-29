@@ -4,8 +4,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKMorphologicalWatershedImage_h_
-#define _ITKMorphologicalWatershedImage_h_
+#ifndef _d3d_itk_MorphologicalWatershedImage_h_
+#define _d3d_itk_MorphologicalWatershedImage_h_
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -102,4 +102,4 @@ private:
 #pragma clang diagnostic pop
 #endif
 
-#endif /* _ITKMorphologicalWatershedImage_H_ */
+#endif /* _d3d_itk_MorphologicalWatershedImage_H_ */

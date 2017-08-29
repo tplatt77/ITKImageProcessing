@@ -1,5 +1,5 @@
-#ifndef _ITKGetComponentsDimensions_h
-#define _ITKGetComponentsDimensions_h
+#ifndef _d3d_itk_GetComponentsDimensions_h
+#define _d3d_itk_GetComponentsDimensions_h
 
 #include <QVector>
 #include <itkRGBAPixel.h>

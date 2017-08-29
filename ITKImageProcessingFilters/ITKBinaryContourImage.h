@@ -4,8 +4,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKBinaryContourImage_h_
-#define _ITKBinaryContourImage_h_
+#ifndef _d3d_itk_BinaryContourImage_h_
+#define _d3d_itk_BinaryContourImage_h_
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -102,4 +102,4 @@ private:
 #pragma clang diagnostic pop
 #endif
 
-#endif /* _ITKBinaryContourImage_H_ */
+#endif /* _d3d_itk_BinaryContourImage_H_ */

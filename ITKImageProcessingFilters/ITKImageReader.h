@@ -31,8 +31,8 @@
 *
 * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-#ifndef _ITKImageReader_H_
-#define _ITKImageReader_H_
+#ifndef _d3d_itk_ImageReader_H_
+#define _d3d_itk_ImageReader_H_
 
 #include "SIMPLib/Common/AbstractFilter.h"
 #include "SIMPLib/Common/SIMPLibSetGetMacros.h"
@@ -164,17 +164,39 @@ protected:
    */
   void initialize();
 
-  /**
-  * @brief Does the actual reading of the image with itkImageFileReader.
-  */
-  template <typename TComponent> void readImage(const itk::ImageIOBase::Pointer& imageIO, const QString& filename, bool dataCheck);
-  template <typename TComponent, unsigned int dimensions> void readImage(const itk::ImageIOBase::Pointer& imageIO, const QString& filename, bool dataCheck);
-  template <typename TPixel, unsigned int> void readImage(const QString& filename, bool dataCheck);
   void readImage(bool dataCheck);
-
+  
   /**
-  * @brief Reads image size, spacing and origin, and updates container information accordingly.
-  */
+   * @brief readImage
+   * @param imageIO
+   * @param filename
+   * @param dataCheck
+   */
+  template <typename TComponent>
+  void readImage(const itk::ImageIOBase::Pointer& imageIO, const QString& filename, bool dataCheck);
+  
+  /**
+   * @brief readImage
+   * @param imageIO
+   * @param filename
+   * @param dataCheck
+   */
+  template <typename TComponent, unsigned int dimensions> 
+  void readImage(const itk::ImageIOBase::Pointer& imageIO, const QString& filename, bool dataCheck);
+  
+  /**
+   * @brief readImage
+   * @param filename
+   * @param dataCheck
+   */
+  template <typename TPixel, unsigned int> 
+  void readImage(const QString& filename, bool dataCheck);
+  
+  /**
+   * @brief Reads image size, spacing and origin, and updates container information accordingly.
+   * @param reader
+   * @param container
+   */
   template <typename TPixel, unsigned int dimensions>
   void readImageOutputInformation(typename itk::ImageFileReader<itk::Dream3DImage<TPixel, dimensions>>::Pointer& reader, DataContainer::Pointer& container);
 
@@ -183,4 +205,4 @@ private:
   void operator=(const ITKImageReader&); // Operator '=' Not Implemented
 };
 
-#endif /* _ITKImageReader_H_ */
+#endif /* _d3d_itk_ImageReader_H_ */

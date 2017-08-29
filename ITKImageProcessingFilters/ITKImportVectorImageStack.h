@@ -32,8 +32,8 @@
 *    United States Prime Contract Navy N00173-07-C-2068
 *
 * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-#ifndef _iTKImportVectorImageStack_h_
-#define _iTKImportVectorImageStack_h_
+#ifndef _d3d_itk_ImportVectorImageStack_h_
+#define _d3d_itk_ImportVectorImageStack_h_
 
 #include <QtCore/QFile>
 
@@ -43,8 +43,11 @@
 #include "SIMPLib/DataArrays/IDataArray.h"
 #include "SIMPLib/FilterParameters/FloatVec3FilterParameter.h"
 
-
 #include "ITKImageProcessing/FilterParameters/ImportVectorImageStackFilterParameter.h"
+
+#include "ITKImageProcessing/ITKImageProcessingFilters/itkDream3DImage.h"
+
+#include <itkImageFileReader.h>
 
 /**
  * @class ITKImportVectorImageStack ITKImportVectorImageStack.h ImageIO/Code/ImageIOFilters/ITKImportVectorImageStack.h
@@ -182,7 +185,49 @@ class ITKImportVectorImageStack : public AbstractFilter
      * @brief generateFileList
      */
     void generateFileList();
-
+    
+    /**
+     * @brief ITKImportVectorImageStack::readImage
+     * @param dataCheck
+     */
+    void readImage(const QString &filename, bool dataCheck);
+    
+    
+    /**
+   * @brief readImage
+   * @param imageIO
+   * @param filename
+   * @param dataCheck
+   */
+    template <typename TComponent>
+    void readImage(const itk::ImageIOBase::Pointer& imageIO, const QString& filename, bool dataCheck);
+    
+    /**
+   * @brief readImage
+   * @param imageIO
+   * @param filename
+   * @param dataCheck
+   */
+    template <typename TComponent, unsigned int dimensions> 
+    void readImage(const itk::ImageIOBase::Pointer& imageIO, const QString& filename, bool dataCheck);
+    
+    /**
+   * @brief readImage
+   * @param filename
+   * @param dataCheck
+   */
+    template <typename TPixel, unsigned int> 
+    void readImage(const QString& filename, bool dataCheck);
+    
+    /**
+   * @brief Reads image size, spacing and origin, and updates container information accordingly.
+   * @param reader
+   * @param container
+   */
+    template <typename TPixel, unsigned int dimensions>
+    void readImageOutputInformation(typename itk::ImageFileReader<itk::Dream3DImage<TPixel, dimensions>>::Pointer& reader, DataContainer::Pointer& container);
+    
+    
   private:
 
 
@@ -199,4 +244,4 @@ class ITKImportVectorImageStack : public AbstractFilter
     void operator=(const ITKImportVectorImageStack&); // Operator '=' Not Implemented
 };
 
-#endif /* ITKImportVectorImageStack_H_ */
+#endif /* _d3d_itk_ImportVectorImageStack_h_ */

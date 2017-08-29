@@ -1,5 +1,5 @@
-#ifndef _ITKInPlaceImageToDream3DDataFilter_h
-#define _ITKInPlaceImageToDream3DDataFilter_h
+#ifndef _d3d_itk_InPlaceImageToDream3DDataFilter_h
+#define _d3d_itk_InPlaceImageToDream3DDataFilter_h
 
 #include "ITKImageProcessing/ITKImageProcessingFilters/itkDream3DImage.h"
 #include "ITKImageProcessing/ITKImageProcessingFilters/itkGetComponentsDimensions.h"

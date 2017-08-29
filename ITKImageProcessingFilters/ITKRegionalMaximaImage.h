@@ -4,8 +4,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKRegionalMaximaImage_h_
-#define _ITKRegionalMaximaImage_h_
+#ifndef _d3d_itk_RegionalMaximaImage_h_
+#define _d3d_itk_RegionalMaximaImage_h_
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -105,4 +105,4 @@ private:
 #pragma clang diagnostic pop
 #endif
 
-#endif /* _ITKRegionalMaximaImage_H_ */
+#endif /* _d3d_itk_RegionalMaximaImage_H_ */

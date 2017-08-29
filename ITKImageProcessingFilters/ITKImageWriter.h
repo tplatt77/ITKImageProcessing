@@ -31,8 +31,8 @@
 *
 * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-#ifndef _ITKImageWriter_H_
-#define _ITKImageWriter_H_
+#ifndef _d3d_itk_ImageWriter_H_
+#define _d3d_itk_ImageWriter_H_
 
 #include "SIMPLib/Common/AbstractFilter.h"
 #include "SIMPLib/Common/SIMPLibSetGetMacros.h"
@@ -176,4 +176,4 @@ private:
   void operator=(const ITKImageWriter&); // Operator '=' Not Implemented
 };
 
-#endif /* _ITKImageWriter_H_ */
+#endif /* _d3d_itk_ImageWriter_H_ */

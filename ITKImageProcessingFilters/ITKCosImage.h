@@ -4,8 +4,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKCosImage_h_
-#define _ITKCosImage_h_
+#ifndef _d3d_itk_CosImage_h_
+#define _d3d_itk_CosImage_h_
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -91,4 +91,4 @@ private:
 #pragma clang diagnostic pop
 #endif
 
-#endif /* _ITKCosImage_H_ */
+#endif /* _d3d_itk_CosImage_H_ */

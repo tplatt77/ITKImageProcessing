@@ -4,8 +4,8 @@
  * Your License or Copyright can go here
  */
 
-#ifndef _ITKBinaryMinMaxCurvatureFlowImage_h_
-#define _ITKBinaryMinMaxCurvatureFlowImage_h_
+#ifndef _d3d_itk_BinaryMinMaxCurvatureFlowImage_h_
+#define _d3d_itk_BinaryMinMaxCurvatureFlowImage_h_
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -105,4 +105,4 @@ private:
 #pragma clang diagnostic pop
 #endif
 
-#endif /* _ITKBinaryMinMaxCurvatureFlowImage_H_ */
+#endif /* _d3d_itk_BinaryMinMaxCurvatureFlowImage_H_ */
