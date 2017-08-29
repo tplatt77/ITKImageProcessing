@@ -68,6 +68,7 @@ class ITKImportVectorImageStack : public AbstractFilter
 
     SIMPL_FILTER_PARAMETER(QString, DataContainerName)
     Q_PROPERTY(QString DataContainerName READ getDataContainerName WRITE setDataContainerName)
+    
     SIMPL_FILTER_PARAMETER(QString, CellAttributeMatrixName)
     Q_PROPERTY(QString CellAttributeMatrixName READ getCellAttributeMatrixName WRITE setCellAttributeMatrixName)
 
@@ -186,50 +187,8 @@ class ITKImportVectorImageStack : public AbstractFilter
      */
     void generateFileList();
     
-    /**
-     * @brief ITKImportVectorImageStack::readImage
-     * @param dataCheck
-     */
-    void readImage(const QString &filename, bool dataCheck);
-    
-    
-    /**
-   * @brief readImage
-   * @param imageIO
-   * @param filename
-   * @param dataCheck
-   */
-    template <typename TComponent>
-    void readImage(const itk::ImageIOBase::Pointer& imageIO, const QString& filename, bool dataCheck);
-    
-    /**
-   * @brief readImage
-   * @param imageIO
-   * @param filename
-   * @param dataCheck
-   */
-    template <typename TComponent, unsigned int dimensions> 
-    void readImage(const itk::ImageIOBase::Pointer& imageIO, const QString& filename, bool dataCheck);
-    
-    /**
-   * @brief readImage
-   * @param filename
-   * @param dataCheck
-   */
-    template <typename TPixel, unsigned int> 
-    void readImage(const QString& filename, bool dataCheck);
-    
-    /**
-   * @brief Reads image size, spacing and origin, and updates container information accordingly.
-   * @param reader
-   * @param container
-   */
-    template <typename TPixel, unsigned int dimensions>
-    void readImageOutputInformation(typename itk::ImageFileReader<itk::Dream3DImage<TPixel, dimensions>>::Pointer& reader, DataContainer::Pointer& container);
-    
-    
   private:
-
+    int m_PixelBytes = 0;
 
     /**
      * @brief readImage does the work of reading in the image. If \c dataCheck

@@ -74,7 +74,7 @@ ImportVectorImageStackWidget::ImportVectorImageStackWidget(FilterParameter* para
 , m_DidCausePreflight(false)
 {
   m_Filter = qobject_cast<ITKImportVectorImageStack*>(filter);
-  Q_ASSERT_X(nullptr != m_Filter, "ImportVectorImageStackWidget can ONLY be used with ImportVectorImageStack filter", __FILE__);
+  Q_ASSERT_X(nullptr != m_Filter, "ImportVectorImageStackWidget can ONLY be used with ITKImportVectorImageStack filter", __FILE__);
 
   setupUi(this);
   setupGui();
@@ -742,6 +742,7 @@ void ImportVectorImageStackWidget::filterNeedsInputParameters(AbstractFilter* fi
   data.StartIndex = m_StartIndex->value();
   data.StartComp = m_StartComp->value();
   data.EndComp = m_EndComp->value();
+  data.Separator = m_Separator->text();
 
 
   QVariant v;
