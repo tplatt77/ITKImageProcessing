@@ -28,6 +28,7 @@ set(_PublicFilters
     ITKDiscreteGaussianImage
     ITKMedianImage
     ITKRefineTileCoordinates
+	ITKResampleImage
     ITKImportFijiMontage
     ITKImportRoboMetMontage
 )
