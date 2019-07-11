@@ -67,6 +67,7 @@ void ITKResampleImage::readFilterParameters(AbstractFilterParametersReader* read
   setNewCellArrayName(reader->readString("NewCellArrayName", getNewCellArrayName()));
   setSaveAsNewArray(reader->readValue("SaveAsNewArray", getSaveAsNewArray()));
   setOutputSpacing(reader->readValue("OutputSpacing", getOutputSpacing()));
+  setOutputSize(reader->readIntVec3("OutputSize", getOutputSize()));
 
   reader->closeFilterGroup();
 }
@@ -81,7 +82,7 @@ template <typename InputPixelType, typename OutputPixelType, unsigned int Dimens
 
   // Check consistency of parameters
   this->CheckIntegerEntry<int, int>(m_OutputSpacing, "OutputSpacing", true);
-  //this->CheckVectorEntry<int, int>(m_OutputSize, "OutputSize", true);
+  this->CheckVectorEntry<int, IntVec3Type>(m_OutputSize, "OutputSize", true);
 
   ITKImageProcessingBase::dataCheck<InputPixelType, OutputPixelType, Dimension>();
 }
